@@ -1,0 +1,267 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background: linear-gradient(#184F90,#007BFF); /* Azul */
+    color: white;
+    padding: 20px 0 ;
+    height: 40vh;
+    text-align: center;
+    transition: height 0.3s ease; /* Animação simples */
+}
+
+header:hover {
+    height: 60vh; /* Aumenta a altura ao passar o mouse */
+}
+
+nav{
+    background: linear-gradient(#1C1F22,#000);
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo */
+.logo {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Menu lateral no mobile */
+.menu-btn {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    justify-content: space-between;
+}
+
+.menu-btn .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Links de navegação */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    padding: 0 0 0 10px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.nav-links li a:hover {
+    background-color: #0056b3;
+}
+
+/* Botão de destaque no menu */
+.btn-shop {
+    background: #ff8c00;
+    color: #fff;
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    
+}
+.btn-shop:hover{
+    background: #FBFDFF;
+    color: #ff8c00;
+}
+
+@media(max-width: 768px){
+  .menu-btn {
+    display: flex;
+  }
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100%;
+    background: linear-gradient(#1C1F22,#000);
+    flex-direction: column;
+    padding-top: 60px;
+    transition: left 0.3s ease;
+    z-index: 999;
+  }
+  .nav-links.active {
+    left: 0;
+  }
+  /* Animação botão menu */
+  .menu-btn.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .menu-btn.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-btn.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+}
+
+ #container {
+    background-color: #fefefe; /* Fundo claro */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    position: relative; /* Posicionamento para as setas */
+    overflow: hidden; /* Esconde barra de rolagem */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombreamento */
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 200;
+}
+a:hover{
+  font-weight: 600;
+  transition: 5ms;
+}
+.carousel {
+    display: flex; /* Flexbox para itens do carrossel */
+    overflow-x: auto; /* Permite rolagem horizontal */
+    scroll-behavior: smooth; /* Rolagem suave */
+    scrollbar-width: none; /* Esconde a barra de rolagem (Firefox) */
+}
+
+.carousel::-webkit-scrollbar {
+    display: none; /* Esconde a barra de rolagem (Chrome, Safari, Edge) */
+}
+
+.carousel-item {
+    flex: 0 0 auto; /* Itens não encolhem */
+    margin-right: 10px; /* Espaçamento entre itens */
+    padding: 15px;
+    background-color: #ffffff; /* Fundo branco para os itens do carrossel */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-width: 200px; /* Largura mínima dos itens do carrossel */
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 123, 255, 0.8); /* Fundo azul com transparência */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1; /* Ficará acima dos itens do carrossel */
+}
+
+.arrow-left {
+    left: 10px;
+}
+
+.arrow-right {
+    right: 10px;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff; /* Branco */
+    margin: 10px;
+    padding: 15px;
+    flex: 1 1 300px; /* flex-grow, flex-shrink, flex-basis */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+h3{
+    color: #3297FC;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    position: relative;
+    bottom: 0;
+    
+}
+
+#shopLogue {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buy-btn {
+    background-color: #E0A800; /* Verde */
+    color: #000;
+}
+
+.buy-btn:hover {
+    background-color: #FFFFFF; /* Verde escuro */
+}
+
+.cart-btn {
+    background-color: #39C5F6; /* Amarelo */
+    color: black;
+}
+
+.cart-btn:hover {
+    background-color: #FFFFFF; /* Amarelo escuro */
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .container-card {
+        flex-direction: column;
+    }
+}

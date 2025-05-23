@@ -1,0 +1,10 @@
+
+#container {
+    background-color: #fefefe; /* Fundo claro */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    position: relative; /* Posicionamento para as setas */
+    overflow: hidden; /* Esconde barra de rolagem */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombreamento */
+}
